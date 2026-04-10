@@ -18,7 +18,7 @@ public class HomePage {
     }
 
     public void choiceComputerCategory() {
-        // Використовуємо JS клік, щоб оминути вікно "Одесса"
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", computerCategory);
     }

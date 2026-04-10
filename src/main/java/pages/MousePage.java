@@ -13,7 +13,7 @@ public class MousePage {
     @FindBy(xpath = "(//a[contains(@href, 'ff=')])[1]")
     private WebElement firstBrand;
 
-    // Змінений локатор: шукаємо просто посилання з класом 'name'
+
     @FindBy(xpath = "//div[contains(@class, 'item')]//a[contains(@href, '/md/')]")
     private List<WebElement> mouseNames;
 
@@ -29,7 +29,7 @@ public class MousePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", firstBrand);
 
-        // Даємо сайту більше часу на оновлення сторінки (Ajax)
+
         try { Thread.sleep(3000); } catch (InterruptedException e) {}
 
         return brandName;
